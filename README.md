@@ -13,7 +13,7 @@ One key difference between the analysis of Mosteller and Wallance and our analys
 
 ## Loading and Accessing Data
 
-In the `data` folder there is a folder named `authors` that currently contains eight groupings of ten .R files that have all been anonymized. However, each of the eight groupings are attributed to one author/author grouping. The `data` folder also contains `pca_info.rda` and `r_namespaces.rda`. `pca_info.rda` is needed for the file pca.R in order to complete the analysis. `r_namespaces.rda` contains thousands of namespaces unique to R which are used in wallace_pipeline.R.
+In the `data` folder there is a folder named `authors` that currently contains eight groupings of ten .R files that have all been anonymized. However, each of the eight groupings are attributed to one author/author grouping. The `data` folder also contains `pca_info.rda` and `r_namespaces.rda`. `pca_info.rda` is needed for the file `pca.R` in order to complete the analysis. `r_namespaces.rda` contains thousands of namespaces unique to R which are used in `wallace_pipeline.R`.
 
 ### `extract_code.R`
 
@@ -21,7 +21,7 @@ The code in this file uses purl() to remove the the authorship lines at the top 
 
 ### `get_namespace.R`
 
-This code is used to access the thousands of namespaces in r packages looked at. They are saved as `r_namespaces.rda`.
+This code is used to access the thousands of namespaces in R packages looked at. They are saved as `r_namespaces.rda`.
 
 ## Analysis
 
@@ -37,7 +37,7 @@ This file, as it currently is written, takes in the data in the `authors` folder
 
 ### `wallace_pipeline.R`
 
-Each author pairing is iterated through and LASSO regression is used to predict the authorship of the testing set. The accuracy is recorded. The coefficients of each model are stored in a dataframe for Principal Component Analysis.
+Each author pairing is iterated through using a nested loop and LASSO regression is used to predict the authorship of the testing set. The accuracy is recorded. The coefficients of each model are stored in a dataframe for Principal Component Analysis.
 
 ### `pca.R`
 
