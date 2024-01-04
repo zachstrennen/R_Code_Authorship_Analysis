@@ -13,14 +13,23 @@ One key difference between the analysis of Mosteller & Wallance and our analysis
 
 ## Loading and Accessing Data
 
-In the `data` folder there is a folder named `authors` that currently contains
+In the `data` folder there is a folder named `authors` that currently contains eight groupings of ten .R files that have all been anonymized. However, each of the eight groupings are attributed to one author/author grouping. The `data` folder also contains `pca_info.rda` and `r_namespaces.rda`. `pca_info.rda` is needed for the file pca.R in order to complete the analysis. `r_namespaces.rda` contains thousands of namespaces unique to R which are used in wallace_pipeline.R.
 
-## File Descriptions
+### `extract_code.R`
 
-### `file_name.py`
-What file does.
+The code in this file uses purl() to remove the the authorship lines at the top of r files and anonymize the file names. This was created to work with a mass amount of students' code if needed.
 
-**Usage:**
+### `get_namespace.R`
+
+This code is used to access the thousands of namespaces in r packages looked at. They are saved as `r_namespaces.rda`.
+
+## Analysis
+
+To replicate the analyis run the following code files in order.
+
+### `rcode2txt`
+
+This code first initializes the definitions of important placeholder tokens. The function reformat_text_R is defined after. This function takes in a .R file, replaces all R-specific tokens with placeholder tokens, and returns the resulting text.
 
 
 ## Installation
